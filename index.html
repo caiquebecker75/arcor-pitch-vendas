@@ -184,6 +184,12 @@ body.sr #rp{display:block}
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.07;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}@media (prefers-reduced-motion:reduce){body::after{opacity:.04}}
 .grain{position:fixed;inset:0;z-index:9997;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>")}
 @media (min-width:900px){[data-k=cases1] .m4{grid-template-columns:repeat(2,1fr)}[data-k=ar] .split,[data-k=producao] .split{grid-template-columns:1.5fr 1fr}}
+
+.mosaic .tile:first-child{grid-column:span 2;grid-row:span 2}
+.mosaic .tile:first-child img{aspect-ratio:16/10;object-fit:cover;height:100%}
+.mosaic.m4{grid-template-columns:repeat(3,1fr)}
+.tile img{aspect-ratio:16/10;object-fit:cover}
+@media(max-width:900px){.mosaic .tile:first-child{grid-column:auto;grid-row:auto}.mosaic.m4{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -285,8 +291,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 <h2 class="rv wide">Quem vai atender vocês já sentou na cadeira de vocês</h2>
 <p class="lead rv">A casa não nasceu na propaganda. Nasceu dos dois lados da mesa do trade, e os dois continuam aqui dentro.</p>
 <div class="grid g2" style="margin-top:30px">
-<div class="card rv"><div class="num xl lime-t" style="font-size:clamp(70px,9vw,130px)"><span data-n="20" data-conta="20">20</span></div><strong class="t">Daniel Coimbra · anos na indústria</strong><p class="sm" style="opacity:.75">Kraft, Mondelez, Unilever, Whirlpool</p><p style="margin-top:10px">Duas décadas do lado de quem <b>aprova a arte, cobra o prazo e responde pelo painel legal</b> da embalagem. É o lado da mesa em que a Arcor está.</p></div>
-<div class="card rv"><div class="num xl lime-t" style="font-size:clamp(70px,9vw,130px)"><span data-n="15" data-conta="15">15</span></div><strong class="t">Caique Becker · anos no varejo</strong><p class="sm" style="opacity:.75">GPA, Extra, Minuto Pão de Açúcar</p><p style="margin-top:10px">Quinze anos do lado de quem <b>recebe a peça, monta a gôndola e decide se ela fica de pé</b>. É onde a arte de vocês termina.</p></div>
+<div class="card rv"><div class="num xl lime-t k-num" style="font-size:clamp(70px,9vw,130px)"><span data-n="20" data-conta="20">20</span></div><strong class="t">Daniel Coimbra · anos na indústria</strong><p class="sm" style="opacity:.75">Kraft, Mondelez, Unilever, Whirlpool</p><p style="margin-top:10px">Duas décadas do lado de quem <b>aprova a arte, cobra o prazo e responde pelo painel legal</b> da embalagem. É o lado da mesa em que a Arcor está.</p></div>
+<div class="card rv"><div class="num xl lime-t k-num" style="font-size:clamp(70px,9vw,130px)"><span data-n="15" data-conta="15">15</span></div><strong class="t">Caique Becker · anos no varejo</strong><p class="sm" style="opacity:.75">GPA, Extra, Minuto Pão de Açúcar</p><p style="margin-top:10px">Quinze anos do lado de quem <b>recebe a peça, monta a gôndola e decide se ela fica de pé</b>. É onde a arte de vocês termina.</p></div>
 </div>
 <p class="imp rv"><b>Implicação:</b> a agência de mercado aprende a operação do cliente na conta do cliente. Aqui os dois lados já foram vividos antes de a conta existir, e alimento é exatamente de onde viemos.</p>
 </div>
@@ -362,9 +368,9 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 <div class="kicker rv">Capítulo 03 · O que entendemos do escopo</div>
 <h2 class="rv wide">Não são 2.174 peças, são até 10.870 rodadas de arte</h2>
 <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(14px,3vw,48px);margin-top:26px" class="rv">
-<div><div class="num xl" style="font-size:clamp(64px,10vw,150px)"><span data-n="2174" data-conta="2174">2.174</span></div><div class="sm">peças por ano, o que a tabela conta</div></div>
+<div><div class="num xl k-num" style="font-size:clamp(64px,10vw,150px)"><span data-n="2174" data-conta="2174">2.174</span></div><div class="sm">peças por ano, o que a tabela conta</div></div>
 <div class="arrow">&#8594;</div>
-<div><div class="num xl lime-t" style="font-size:clamp(64px,10vw,150px)"><span data-n="10870" data-conta="10870">10.870</span></div><div class="sm">rodadas de arte por ano, o que o trabalho carrega</div></div></div>
+<div><div class="num xl lime-t k-num" style="font-size:clamp(64px,10vw,150px)"><span data-n="10870" data-conta="10870">10.870</span></div><div class="sm">rodadas de arte por ano, o que o trabalho carrega</div></div></div>
 <div class="mix rv" style="margin-top:28px"><div style="--w:20%;background:var(--paper);color:var(--ink)">Entrega</div><div style="--w:20%;background:var(--lime);color:var(--ink)">Alteração 1</div><div style="--w:20%;background:var(--lime);color:var(--ink)">Alteração 2</div><div style="--w:20%;background:var(--lime);color:var(--ink)">Alteração 3</div><div style="--w:20%;background:var(--lime);color:var(--ink)">Alteração 4</div></div>
 <p class="sm rv" style="margin-top:10px">Cada peça carrega 1 entrega mais 4 alterações inclusas, por condição do RFQ. <b>8.696 rodadas são alteração inclusa: 80% do trabalho não aparece na contagem de peças.</b></p>
 <div class="grid g4">
@@ -446,7 +452,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 <div class="kicker rv">Capítulo 04 · Sazonalidade · item 3.1.l do RFI</div>
 <h2 class="rv wide">A tabela é um total anual, e não diz em que semana</h2>
 <div class="split" style="margin-top:24px">
-<div class="rv"><div class="num xl lime-t" style="font-size:clamp(84px,12vw,180px)"><span data-n="181" data-conta="181">181</span></div><p class="lead" style="margin-top:6px">peças por mês é a <b>média</b>. Numa casa que embala ovo de Páscoa, a média não acontece em mês nenhum.</p></div>
+<div class="rv"><div class="num xl lime-t k-num" style="font-size:clamp(84px,12vw,180px)"><span data-n="181" data-conta="181">181</span></div><p class="lead" style="margin-top:6px">peças por mês é a <b>média</b>. Numa casa que embala ovo de Páscoa, a média não acontece em mês nenhum.</p></div>
 <div class="rv"><div class="th">As cinco linhas de Páscoa, como vêm declaradas</div>
 <div class="bars" style="margin-top:10px">
 <div class="bar"><span>Embalagem de Páscoa · etiqueta adesiva</span><i style="--w:100%"></i><b>15</b></div>
@@ -492,7 +498,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 <div class="rv"><div class="th">O que já está incluído</div>
 <div class="mix" style="margin-top:12px;height:72px"><div style="--w:20%;background:var(--ink);color:var(--paper)">Entrega</div><div style="--w:20%;background:var(--tealink);color:#fff">Alt. 1</div><div style="--w:20%;background:var(--tealink);color:#fff">Alt. 2</div><div style="--w:20%;background:var(--tealink);color:#fff">Alt. 3</div><div style="--w:20%;background:var(--tealink);color:#fff">Alt. 4</div></div>
 <p class="lead" style="margin-top:14px">Cada peça carrega <b>quatro rodadas de alteração</b>. Não é cortesia nem letra miúda: é hora orçada dentro do unitário.</p></div>
-<div class="rv"><div class="th">A partir da quinta</div><div class="num xl lime-t" style="font-size:clamp(84px,12vw,180px)"><span data-n="15" data-conta="15">15</span>%</div><p class="lead" style="margin-top:6px">do valor unitário da peça, por rodada.</p></div></div>
+<div class="rv"><div class="th">A partir da quinta</div><div class="num xl lime-t k-num" style="font-size:clamp(84px,12vw,180px)"><span data-n="15" data-conta="15">15</span>%</div><p class="lead" style="margin-top:6px">do valor unitário da peça, por rodada.</p></div></div>
 <p class="imp rv"><b>Implicação:</b> a regra existe para ninguém descobrir o valor depois. Numa pauta de 10.870 rodadas por ano, chegar à quinta é raro. Quando chegar, a regra já estava escrita desde a assinatura e vocês decidem se vale a pena antes de pedir. No formato 02, a cobrança não existe, porque lá a refação consome hora do pacote.</p>
 </div>
 <div class="fonte">Fonte: planilha padrão e RFQ, Arcor, 23/10/2026; resposta da 75 LAB ao RFQ, 26/10/2026</div>
@@ -506,7 +512,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 <div class="kicker rv">Capítulo 04 · Formato 02 · capacidade dedicada · a nossa recomendação</div>
 <h2 class="rv wide">O pacote se escolhe pela demanda de vocês, não pelo nosso tamanho</h2>
 <div class="split" style="margin-top:22px">
-<div class="rv"><div class="num xl lime-t" style="font-size:clamp(84px,12vw,180px)"><span data-n="1638" data-conta="1638">1.638</span></div><p class="lead" style="margin-top:6px">horas de equipe por mês consomem as 2.174 peças declaradas. Cada degrau do pacote reserva uma fatia dessa conta.</p></div>
+<div class="rv"><div class="num xl lime-t k-num" style="font-size:clamp(84px,12vw,180px)"><span data-n="1638" data-conta="1638">1.638</span></div><p class="lead" style="margin-top:6px">horas de equipe por mês consomem as 2.174 peças declaradas. Cada degrau do pacote reserva uma fatia dessa conta.</p></div>
 <div class="grid" style="margin-top:0">
 <div class="card rv"><svg class="ic"><use href="#i-users"/></svg><strong class="t">Núcleo dedicado</strong><p>Equipe exclusiva da Arcor. O tempo de desenvolvimento cai <b>9% no ano 1 e 15% em regime</b>, e o mesmo pacote cobre mais pedido a cada trimestre.</p></div>
 <div class="card rv"><svg class="ic"><use href="#i-layers"/></svg><strong class="t">Refação sem limite</strong><p>A capacidade é de vocês. Refazer dez vezes é decisão legítima: o esforço aparece na fila, não em fatura.</p></div>
